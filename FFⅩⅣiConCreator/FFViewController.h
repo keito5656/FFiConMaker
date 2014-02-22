@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FFViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate>
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-- (IBAction)save:(id)sender;
+typedef enum {
+    SOUJACompanyType = 1,
+    KOKKACompanyType,
+    FUMETSUCompanyType,
+}CompanyType;
 
+@interface FFViewController : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (nonatomic)CompanyType company;
+- (IBAction)save:(id)sender;
 @end

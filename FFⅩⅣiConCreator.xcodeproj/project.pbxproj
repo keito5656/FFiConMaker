@@ -23,9 +23,9 @@
 		F5BD05B918B89FBA00EE5B5D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5BD05B818B89FBA00EE5B5D /* Images.xcassets */; };
 		F5BD05BB18B8A1F900EE5B5D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5BD05BA18B8A1F900EE5B5D /* AssetsLibrary.framework */; };
 		F5BD05BE18B8A45D00EE5B5D /* FFSelectGroundCompanyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5BD05BD18B8A45D00EE5B5D /* FFSelectGroundCompanyViewController.m */; };
-		F5CAB7FF18B88E5A00E8172C /* ffxiv_twf03003.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FC18B88E5A00E8172C /* ffxiv_twf03003.png */; };
-		F5CAB80018B88E5A00E8172C /* ffxiv_twf03002.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FD18B88E5A00E8172C /* ffxiv_twf03002.png */; };
-		F5CAB80118B88E5A00E8172C /* ffxiv_twf03001.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FE18B88E5A00E8172C /* ffxiv_twf03001.png */; };
+		F5CAB7FF18B88E5A00E8172C /* ffxiv_twf3.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FC18B88E5A00E8172C /* ffxiv_twf3.png */; };
+		F5CAB80018B88E5A00E8172C /* ffxiv_twf1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FD18B88E5A00E8172C /* ffxiv_twf1.png */; };
+		F5CAB80118B88E5A00E8172C /* ffxiv_twf2.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB7FE18B88E5A00E8172C /* ffxiv_twf2.png */; };
 		F5CAB80318B88E9D00E8172C /* ffxiv_twi1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB80218B88E9D00E8172C /* ffxiv_twi1.png */; };
 		F5CAB84F18B8954300E8172C /* ffxiv_twi25.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB83718B8954300E8172C /* ffxiv_twi25.png */; };
 		F5CAB85018B8954300E8172C /* ffxiv_twi24.png in Resources */ = {isa = PBXBuildFile; fileRef = F5CAB83818B8954300E8172C /* ffxiv_twi24.png */; };
@@ -86,9 +86,9 @@
 		F5BD05BA18B8A1F900EE5B5D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		F5BD05BC18B8A45D00EE5B5D /* FFSelectGroundCompanyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFSelectGroundCompanyViewController.h; sourceTree = "<group>"; };
 		F5BD05BD18B8A45D00EE5B5D /* FFSelectGroundCompanyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFSelectGroundCompanyViewController.m; sourceTree = "<group>"; };
-		F5CAB7FC18B88E5A00E8172C /* ffxiv_twf03003.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf03003.png; path = frame/ffxiv_twf03003.png; sourceTree = "<group>"; };
-		F5CAB7FD18B88E5A00E8172C /* ffxiv_twf03002.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf03002.png; path = frame/ffxiv_twf03002.png; sourceTree = "<group>"; };
-		F5CAB7FE18B88E5A00E8172C /* ffxiv_twf03001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf03001.png; path = frame/ffxiv_twf03001.png; sourceTree = "<group>"; };
+		F5CAB7FC18B88E5A00E8172C /* ffxiv_twf3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf3.png; path = frame/ffxiv_twf3.png; sourceTree = "<group>"; };
+		F5CAB7FD18B88E5A00E8172C /* ffxiv_twf1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf1.png; path = frame/ffxiv_twf1.png; sourceTree = "<group>"; };
+		F5CAB7FE18B88E5A00E8172C /* ffxiv_twf2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ffxiv_twf2.png; path = frame/ffxiv_twf2.png; sourceTree = "<group>"; };
 		F5CAB80218B88E9D00E8172C /* ffxiv_twi1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ffxiv_twi1.png; sourceTree = "<group>"; };
 		F5CAB83718B8954300E8172C /* ffxiv_twi25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ffxiv_twi25.png; sourceTree = "<group>"; };
 		F5CAB83818B8954300E8172C /* ffxiv_twi24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ffxiv_twi24.png; sourceTree = "<group>"; };
@@ -230,9 +230,9 @@
 		F5CAB7C118B889D900E8172C /* frames */ = {
 			isa = PBXGroup;
 			children = (
-				F5CAB7FC18B88E5A00E8172C /* ffxiv_twf03003.png */,
-				F5CAB7FD18B88E5A00E8172C /* ffxiv_twf03002.png */,
-				F5CAB7FE18B88E5A00E8172C /* ffxiv_twf03001.png */,
+				F5CAB7FC18B88E5A00E8172C /* ffxiv_twf3.png */,
+				F5CAB7FD18B88E5A00E8172C /* ffxiv_twf1.png */,
+				F5CAB7FE18B88E5A00E8172C /* ffxiv_twf2.png */,
 			);
 			name = frames;
 			sourceTree = "<group>";
@@ -348,11 +348,11 @@
 			files = (
 				F5CAB85A18B8954300E8172C /* ffxiv_twi14.png in Resources */,
 				F5CAB86518B8954300E8172C /* ffxiv_twi3.png in Resources */,
-				F5CAB80118B88E5A00E8172C /* ffxiv_twf03001.png in Resources */,
+				F5CAB80118B88E5A00E8172C /* ffxiv_twf2.png in Resources */,
 				F5CAB85C18B8954300E8172C /* ffxiv_twi12.png in Resources */,
 				F57932AD18B886950096E22D /* InfoPlist.strings in Resources */,
 				F5BD05B918B89FBA00EE5B5D /* Images.xcassets in Resources */,
-				F5CAB80018B88E5A00E8172C /* ffxiv_twf03002.png in Resources */,
+				F5CAB80018B88E5A00E8172C /* ffxiv_twf1.png in Resources */,
 				F5CAB85718B8954300E8172C /* ffxiv_twi17.png in Resources */,
 				F5CAB86218B8954300E8172C /* ffxiv_twi6.png in Resources */,
 				F5CAB86018B8954300E8172C /* ffxiv_twi8.png in Resources */,
@@ -360,7 +360,7 @@
 				F5CAB85918B8954300E8172C /* ffxiv_twi15.png in Resources */,
 				F5CAB85218B8954300E8172C /* ffxiv_twi22.png in Resources */,
 				F5CAB85118B8954300E8172C /* ffxiv_twi23.png in Resources */,
-				F5CAB7FF18B88E5A00E8172C /* ffxiv_twf03003.png in Resources */,
+				F5CAB7FF18B88E5A00E8172C /* ffxiv_twf3.png in Resources */,
 				F57932B618B886950096E22D /* Main.storyboard in Resources */,
 				F5CAB85318B8954300E8172C /* ffxiv_twi21.png in Resources */,
 				F5CAB86618B8954300E8172C /* ffxiv_twi2.png in Resources */,

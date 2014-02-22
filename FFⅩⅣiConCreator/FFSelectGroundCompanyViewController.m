@@ -38,6 +38,8 @@
 
 - (IBAction)selectCompany:(id)sender {
     FFViewController *ffVC = [self.storyboard instantiateViewControllerWithIdentifier:@"frameMaker"];
+    UIButton *button = sender;
+    ffVC.company = button.tag;
     [self.navigationController pushViewController:ffVC animated:YES];
 }
 @end

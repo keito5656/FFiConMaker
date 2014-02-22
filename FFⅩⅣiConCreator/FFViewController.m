@@ -17,8 +17,11 @@
 
 - (UIImage *)createImage:(UIImage *)image_b
 {
-    UIImage *image_a = [UIImage imageNamed:@"ffxiv_twf03003.png"];
     UIGraphicsBeginImageContext(CGSizeMake(128, 128));
+    NSString *fileName = [NSString stringWithFormat:@"ffxiv_twf%d.png",_company];
+
+    UIImage *image_a = [UIImage imageNamed:fileName];
+
     [image_b drawInRect:CGRectMake(0, 0, 128, 128)];
     [image_a drawInRect:CGRectMake(0, 0, 128, 128)];
     UIImage *image_c = UIGraphicsGetImageFromCurrentImageContext();
@@ -29,13 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIImage *image_b = [UIImage imageNamed:@"ffxiv_twi03001.png"];
+    NSInteger count = arc4random_uniform(25);
+    NSString *fileName = [NSString stringWithFormat:@"ffxiv_twi%d.png",count];
+    UIImage *image_b = [UIImage imageNamed:fileName];
 
     
     UIImage *image_c;
     image_c = [self createImage:image_b];
-    UIImageView *imageView = [self.view viewWithTag:100];
+    UIImageView *imageView = (UIImageView*)[self.view viewWithTag:100];
     imageView.image = image_c;
     
 	// Do any additional setup after loading the view, typically from a nib.
@@ -50,8 +54,15 @@
 
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+   
+    if (indexPath.row == 0) {
+        UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"AlbumCell" forIndexPath:indexPath];
+        return cell;
+    }
+   
     UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    NSString *filename = [NSString stringWithFormat:@"ffxiv_twi%d.png", indexPath.row+1];
+    NSString *filename = [NSString stringWithFormat:@"ffxiv_twi%d.png", indexPath.row];
     UIImage *image = [UIImage imageNamed:filename];
     UIImageView *imageView = (UIImageView*)[cell viewWithTag:100];
     imageView.image = image;
@@ -59,7 +70,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 25;
+    return 26;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -67,16 +78,27 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *filename = [NSString stringWithFormat:@"ffxiv_twi%d.png", indexPath.row+1];
+    
+    if (indexPath.row == 0) {
+        UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
+        ipc.delegate = self;
+        ipc.allowsEditing = YES;
+        [self presentViewController:ipc animated:YES completion:^{
+            
+        }];
+    }
+    
+    
+    NSString *filename = [NSString stringWithFormat:@"ffxiv_twi%d.png", indexPath.row];
     UIImage *image = [UIImage imageNamed:filename];
     UIImage *createdImage = [self createImage:image];
-    UIImageView *imageView = [self.view viewWithTag:100];
+    UIImageView *imageView = (UIImageView*)[self.view viewWithTag:100];
     imageView.image = createdImage;
 }
 
 
 - (IBAction)save:(id)sender {
-    UIImageView *imageView = [self.view viewWithTag:100];
+    UIImageView *imageView = (UIImageView*)[self.view viewWithTag:100];
 
     [self saveImageToPhotosAlbum:imageView.image];
 }
@@ -165,6 +187,16 @@
             break;
     }
     return isAuthorization;
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    
+    UIImage *createdImage = [self createImage:image];
+    UIImageView *imageView = (UIImageView*)[self.view viewWithTag:100];
+    imageView.image = createdImage;
+    
 }
 
 
